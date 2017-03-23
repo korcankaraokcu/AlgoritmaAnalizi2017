@@ -1,0 +1,1 @@
+n=1000,10000,100000,... gibi değerler için grafik okunmaz hale geliyor. O yüzden n=20,40,60,80 kullandım
