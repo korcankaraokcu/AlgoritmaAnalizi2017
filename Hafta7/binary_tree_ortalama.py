@@ -111,6 +111,7 @@ class searchtree:
 
 tekrar_sayisi = input("\nTekrar sayısını girin:")
 dugum_sayisi = input("\nDüğüm sayısını girin:")
+ortalama_list = []
 for x in range(int(tekrar_sayisi)):
     tree = searchtree()
     node_list = random.sample(range(1, 100), int(dugum_sayisi))
@@ -121,3 +122,9 @@ for x in range(int(tekrar_sayisi)):
     toplam = len(tree.depth_list)
     print("DÜĞÜM SAYISI:", toplam, "LOG DÜĞÜM SAYISI:", math.log(toplam))
     print("ORTALAMA:", tree.ortalama())
+    ortalama_list.append(tree.ortalama())
+toplam = 0
+for item in ortalama_list:
+    toplam += item
+final_ortalama = toplam / len(ortalama_list)
+print("FINAL ORTALAMA:", final_ortalama, "LOG DÜĞÜM SAYISI:", math.log(int(dugum_sayisi)))
